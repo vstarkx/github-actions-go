@@ -20,5 +20,8 @@ jobs:
 
       - name: Build Go program
         run: |
-          go build -
+          go build hello.go
 
+      - name: Run Go program
+        run: |
+          ./hello
