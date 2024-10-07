@@ -1,0 +1,18 @@
+name: cime go
+
+on: [push, pull_request]
+
+jobs:
+    cime-go:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@v4
+            - name: set up go
+              uses: actions/setup-go@v4
+              with:  
+                go-version:  '1.19'
+            - name: build go
+              run: go build hello.go
+            - name: run go
+              run: ./hello.go  
