@@ -15,4 +15,4 @@ jobs:
             - name: build go
               run: go build hello.go
             - name: run go
-              run: ./hello.go  
+              run: ./hello 
