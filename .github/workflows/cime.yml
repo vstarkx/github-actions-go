@@ -10,6 +10,6 @@ jobs:
               uses: actions/checkout@v4
               
             - name: build docker
-              run: docker build -t goRun
+              run: docker build -t goRun . 
             - name: run go
               run: docker run goRun
