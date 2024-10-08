@@ -8,11 +8,8 @@ jobs:
         steps:
             - name: checkout
               uses: actions/checkout@v4
-            - name: set up go
-              uses: actions/setup-go@v4
-              with:  
-                go-version:  '1.19'
-            - name: build go
-              run: go build hello.go
+              
+            - name: build docker
+              run: docker build -t gorun . 
             - name: run go
-              run: ./hello 
+              run: docker run gorun
